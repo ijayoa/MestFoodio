@@ -20,14 +20,12 @@ body{
 	padding:1em 0;
 	min-height:800px;
 }
-.logo{
-	float:left;
-}
+
 .menu{
 	float:right;
 	margin-top:3em;;
 }
-/*--//header-welcome-note--*/
+
 button.navig{
 	width:24px;
 	height:24px;
