@@ -51,12 +51,10 @@ Router.route('/recipes', function () {
 
 });
 
-
-
 AccountsTemplates.configureRoute('signIn', {
     name: 'signin',
     path: '/login',
     template: 'signIn',
-     // layoutTemplate: 'myLayout',
+    layoutTemplate: 'indexlayout',
     redirect: '/user-homepage',
 });

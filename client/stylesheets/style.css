@@ -9,6 +9,11 @@
 	background-color: #F57C00
 
 }
+.loggedinAs{
+	color: #FFE0B2;
+
+font-size: 14px;
+}
 .mainnav{
 	margin-top: 50px;
 }
@@ -18,9 +23,7 @@
     width: 100%;  
     margin-bottom: 10px;
 }
-.btn-default{
-	background-color: #F57C00 !important;
-}
+
 .fb-image-profile
 {
     margin: -90px 10px 0px 50px;

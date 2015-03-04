@@ -1,86 +1,91 @@
 <template name="masterlayout">
-<div class="row">
-<nav class="navbar navbar-default navbar-fixed-top ">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="">MESTFoodio</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav pull-right">
-                    <li><a href="">Food Menu</a></li>
-                    <li><a href="">Food Feeds</a></li>
-                    <li><a href="">Start Campaign</a></li>
-                    <li><a href="">Recipe</a></li>
-                    
-                     <li><a href="{{pathFor 'signOut'}}">Logout</a></li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-  </div> 
-  <div class="row mainnav">
-    <div id="wrapper" >
-
-        {{#with profile}}
-
-        <div id="sidebar-wrapper">
-        <div class="row">
-        <h6 style="margin-bottom:10px; color:#fff; margin-top:10px;margin-left: 79px;">YogiJudy</h6>
-        <img src="http://lorempixel.com/180/180/people/9/" alt="..." class="img-circle" style="margin-bottom:20px; margin-top: 20pxpx;margin-left: 43px;">
-        </div>
-         <div class="row" style=" background-color:#FFE0B2; margin:5px; border-radius:5px;">
-         <div class="row " >
-            <div class="col-sm-3">
-             <img src="PNG/10.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
-             </div>
-             <div class="col-sm-9">
-                 <p>Favourite:</p>
-                 <p>{{favourite}}</p>
-             </div>
-             
-        </div>
-       
-         <div class="row">
-            <div class="col-sm-3">
-             <img src="PNG/23.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
-             </div>
-             <div class="col-sm-9">
-                 <p>Allergies:</p>
-                 {{#if $eq allergies ""}}<p>None</p>
-                 {{else}}
-                 <p>{{allergies}}</p>
-                 {{/if}}
-
-             </div>
-               <hr class="hrline">
-             
-        </div>
-         <div class="row">
-            <div class="col-sm-3">
-             <img src="PNG/15.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
-             </div>
-             <div class="col-sm-9">
-                 <p>Dislike:</p>
-                 <p>{{notfavourite}}</p>
-             </div>
-             
-        </div>
-         </div>
-        </div>
-        {{/with}}
-        <div id="page-content-wrapper">
-        
+    <div class="row">
+        <nav class="navbar navbar-default navbar-fixed-top ">
             <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="">MESTFoodio</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav pull-right">
+                        <li><a href="">Food Menu</a></li>
+                        <li><a href="">Food Feeds</a></li>
+                        <li><a href="">Start Campaign</a></li>
+                        <li><a href="">Recipe</a></li>
+                        {{#if currentUser}}
+                        <li><a id="logout">Logout</a></li>
+                        {{else}}
+                        {{/if}}
 
-            <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
-                
-              
-                {{> yield}}
+                    </ul>
+                </div>
             </div>
-        </div>
-    
-    </div>
+        </nav>
+    </div> 
+    <div class="row mainnav">
+        <div id="wrapper" >
+
+            {{#with profile}}
+
+            <div id="sidebar-wrapper">
+                <div class="row">
+                    <h6 style="margin-bottom:10px; color:#fff; margin-top:10px;margin-left: 79px;">YogiJudy</h6>
+                    <img src="http://lorempixel.com/180/180/people/9/" alt="..." class="img-circle" style="margin-bottom:20px; margin-top: 20pxpx;margin-left: 43px;">
+                    <div class="row text-center">
+                        <p class="loggedinAs"> {{loggedinAs}}</p>
+                    </div>
+                </div>
+                <div class="row" style=" background-color:#FFE0B2; margin:5px; border-radius:5px;">
+                   <div class="row " >
+                    <div class="col-sm-3">
+                       <img src="PNG/10.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
+                   </div>
+                   <div class="col-sm-9">
+                       <p>Favourite:</p>
+                       <p>{{favourite}}</p>
+                   </div>
+
+               </div>
+
+               <div class="row">
+                <div class="col-sm-3">
+                   <img src="PNG/23.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
+               </div>
+               <div class="col-sm-9">
+                   <p>Allergies:</p>
+                   {{#if $eq allergies ""}}<p>None</p>
+                   {{else}}
+                   <p>{{allergies}}</p>
+                   {{/if}}
+
+               </div>
+               <hr class="hrline">
+
+           </div>
+           <div class="row">
+            <div class="col-sm-3">
+               <img src="PNG/15.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
+           </div>
+           <div class="col-sm-9">
+               <p>Dislike:</p>
+               <p>{{notfavourite}}</p>
+           </div>
+
+       </div>
    </div>
+</div>
+{{/with}}
+<div id="page-content-wrapper">
+
+    <div class="container-fluid">
+
+        <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
+
+
+        {{> yield}}
+    </div>
+</div>
+
+</div>
+</div>
 
 </template>
