@@ -58,3 +58,21 @@ AccountsTemplates.configureRoute('signIn', {
     layoutTemplate: 'indexlayout',
     redirect: '/user-homepage',
 });
+
+
+Router.route('/menus', function(){
+  this.render('menus');
+},{
+  name: 'menus',
+  data: function(){
+    return{
+      menus: Menus.find().fetch()
+    }
+  }
+})
+
+Router.route('/menus/newmenu', function(){
+  this.render('newmenu')
+},{
+  name: 'newmenu'
+})
