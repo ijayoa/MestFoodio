@@ -9,7 +9,6 @@ autopublish
 insecure
 accounts-password
 accounts-base
-ian:accounts-ui-bootstrap-3
 accounts-facebook
 accounts-twitter
 aldeed:collection2
@@ -21,3 +20,4 @@ raix:handlebar-helpers
 cfs:standard-packages
 cfs:gridfs
 yogiben:autoform-file
+useraccounts:bootstrap

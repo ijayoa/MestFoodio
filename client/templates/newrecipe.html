@@ -1,0 +1,11 @@
+<template name="newrecipe">
+<h4 class="well">New Recipe</h4>
+
+<div class=" col-md-8 col-md-offset-2 setupForm">
+		<h6 class="well" style="color:#F57C00; margin-top:5px;">Recipe Details</h6>
+		
+			{{> quickForm collection="Recipes" id="insertRecipeForm" type="insert" template="bootstrap3-horizontal" label-class="col-sm-3" input-col-class="col-sm-9"}}
+			
+		</div>
+ 
+</template>
