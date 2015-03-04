@@ -1,41 +1,39 @@
 <template name="menus">
-	<!-- <div id="page-content-wrapper">
-		<div class="col-md-10">
-			 <div class="days"> 
-			 <div>
-			Monday
-			</div>
-				<div class="col-md-5">
-					<div class="lunch">
-					Lunch<br>
-						Option1: {{lunch1}} <br>
-						Option2: {{lunch2}} <br>
-						Dessert:
-					</div>
-				</div>
-				<div class="col-md-5">
-					<div class="dinner">
-					Dinner <br>
-						Option1: {{dinner1}}<br>
-						Option2: {{dinner1}}<br>
-					</div>
-				</div> 
-			 </div> 
-		</div>
-	</div> -->
-
+	
 	<div class="container">
     <div class="row">
         <!-- Card Projects -->
+        {{#each menus}}
+        <p>{{days}}</p>
+        <div class="col-md-4">
+            <div class="card">
+
+                <div class="card-image">
+                    <img class="img-responsive" src="http://i48.tinypic.com/2u7y9gk.jpg">
+                    <span class="card-title">{{lunch1}}</span>
+                </div>
+                
+                <div class="card-content">
+                    <p>{{lunch2}}.</p>
+                </div>
+                
+                <div class="card-action">
+                    <a href="#" target="new_blank">Link</a>
+                    <a href="#" target="new_blank">Link</a>
+                </div>
+            </div>
+        </div>
+
+
         <div class="col-md-4">
             <div class="card">
                 <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
+                    <img class="img-responsive" src="http://upload.wikimedia.org/wikipedia/commons/5/5d/Ghanaian_Red-Red_cuisine_dish_food.jpg">
+                    <span class="card-title">{{dinner1}}</span>
                 </div>
                 
                 <div class="card-content">
-                    <p>Cards for display in portfolio style material design by Google.</p>
+                    <p>{{dinner2}}.</p>
                 </div>
                 
                 <div class="card-action">
@@ -44,28 +42,9 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="col-md-4 col-md-offset-3">
-            <div class="card">
-                <div class="card-image">
-                    <img class="img-responsive" src="http://material-design.storage.googleapis.com/publish/v_2/material_ext_publish/0Bx4BSt6jniD7TDlCYzRROE84YWM/materialdesign_introduction.png">
-                    <span class="card-title">Material Cards</span>
-                </div>
-                
-                <div class="card-content">
-                    <p>Cards for display in portfolio style material design by Google.</p>
-                </div>
-                
-                <div class="card-action">
-                    <a href="#" target="new_blank">Link</a>
-                    <a href="#" target="new_blank">Link</a>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
 </template>
-
 
 

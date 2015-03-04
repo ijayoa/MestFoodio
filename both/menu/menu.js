@@ -13,7 +13,7 @@ Menus.attachSchema(new SimpleSchema({
                     {value: 'Friday', label: 'Friday'}
                 ]
             }
-   		}
+    	}
 	}, 
 	lunch1:{
 		type: String,

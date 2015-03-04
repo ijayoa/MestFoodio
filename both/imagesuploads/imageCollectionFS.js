@@ -1,3 +1,3 @@
-Imags = new FS.Collection("imges", {
+Imags = new FS.Collection("imsges", {
   stores: [new FS.Store.GridFS("imges", {})]
 });
