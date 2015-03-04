@@ -59,6 +59,7 @@ AccountsTemplates.configureRoute('signIn', {
     redirect: '/user-homepage',
 });
 
+
 Router.route('/recipes/:_id/details', function () {     
   this.render('recipeDetails');               
 }, {
@@ -71,3 +72,21 @@ Router.route('/recipes/:_id/details', function () {
    }
  }                      
 });
+
+
+Router.route('/menus', function(){
+  this.render('menus');
+},{
+  name: 'menus',
+  data: function(){
+    return{
+      menus: Menus.find().fetch()
+    }
+  }
+})
+
+Router.route('/menus/newmenu', function(){
+  this.render('newmenu')
+},{
+  name: 'newmenu'
+})

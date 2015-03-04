@@ -1,0 +1,50 @@
+<template name="menus">
+	
+	<div class="container">
+    <div class="row">
+        <!-- Card Projects -->
+        {{#each menus}}
+        <p>{{days}}</p>
+        <div class="col-md-4">
+            <div class="card">
+
+                <div class="card-image">
+                    <img class="img-responsive" src="http://i48.tinypic.com/2u7y9gk.jpg">
+                    <span class="card-title">{{lunch1}}</span>
+                </div>
+                
+                <div class="card-content">
+                    <p>{{lunch2}}.</p>
+                </div>
+                
+                <div class="card-action">
+                    <a href="#" target="new_blank">Link</a>
+                    <a href="#" target="new_blank">Link</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-image">
+                    <img class="img-responsive" src="http://upload.wikimedia.org/wikipedia/commons/5/5d/Ghanaian_Red-Red_cuisine_dish_food.jpg">
+                    <span class="card-title">{{dinner1}}</span>
+                </div>
+                
+                <div class="card-content">
+                    <p>{{dinner2}}.</p>
+                </div>
+                
+                <div class="card-action">
+                    <a href="#" target="new_blank">Link</a>
+                    <a href="#" target="new_blank">Link</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+</template>
+
+
