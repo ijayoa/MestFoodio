@@ -3,14 +3,14 @@
         <nav class="navbar navbar-default navbar-fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="">MESTFoodio</a>
+                    <a class="navbar-brand" href="{{pathFor 'userhome'}}">MESTFoodio</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
                         <li><a href="">Food Menu</a></li>
                         <li><a href="">Food Feeds</a></li>
                         <li><a href="">Start Campaign</a></li>
-                        <li><a href="">Recipe</a></li>
+                        <li><a href="{{pathFor 'recipehome'}}">Suggest Recipe</a></li>
                         {{#if currentUser}}
                         <li><a id="logout">Logout</a></li>
                         {{else}}
@@ -21,7 +21,7 @@
             </div>
         </nav>
     </div> 
-    <div class="row mainnav">
+    <div class="row mainnav" style="width: 100%;">
         <div id="wrapper" >
 
             {{#with profile}}
