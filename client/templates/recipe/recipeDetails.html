@@ -1,0 +1,30 @@
+<template name="recipeDetails">
+
+
+{{#with recipe}}
+   
+	<h5 class="">{{title}}</h5>
+	
+	<hr>
+	<div class="row">
+        
+		<div class="col-sm-8  col-md-offset-2 tile padtile textalign">
+		<div class="row ">
+		 <div class="col-sm-6 col-sm-offset-3 well">
+		 	<img src="img/egu.jpg"  style=""  class=" img-responsive">
+		 </div>
+			
+		</div>
+		<p>DESCRIPTION</p>
+			<p class="tile bgcolor">{{description}}</p>
+		<p>LINKS</p>
+			<p class="tile bgcolor">{{link}}</p>
+			<div class="row textalign ">
+					<hr style="background-color:#B6B6B6;">
+					<p class="tile bgcolor textalign" style="margin:15px;">Created At: {{createdAt}}</p><br/>
+				</div>
+			</div>
+	</div>
+
+{{/with}}
+</template>

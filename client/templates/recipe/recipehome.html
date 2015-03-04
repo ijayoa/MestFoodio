@@ -10,13 +10,13 @@
 </div>
 
 <hr>
-  <div class="row">
+
     
 
-  </div>
+ <div class="row text-center" style="margin-left:154px;">
   {{#each recipes}}
-
-	<div class="col-xs-6 col-md-5 tile padtile ">
+  
+	<div class="col-xs-5 col-md-4 col-xs-offset-3 tile padtile " style="margin-left:50px; margin-bottom:20px;">
             
             <div class="panel status panel-danger">
                 <div class="panel-heading">
@@ -24,16 +24,17 @@
 
                 </div>
                 <div class="panel-body text-center">                        
-                    <a href="pathFor 'recipeinfo'}}"><strong>{{title}}</strong></a>
+                    <a href="{{pathFor 'recipeDetails'}}"><strong>{{title}}</strong></a>
                 </div>
             </div>
 
         </div> 
+
 	{{else}}
 
 	<p>You have not added any recipes yet.</p>
 	{{/each}}
+ </div> 
 
 
-	
 </template>

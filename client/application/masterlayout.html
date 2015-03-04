@@ -1,5 +1,5 @@
 <template name="masterlayout">
-    <div class="row">
+    <div class="row" style="color:#FFE0B2;">
         <nav class="navbar navbar-default navbar-fixed-top ">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -7,12 +7,12 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
-                        <li><a href="">Food Menu</a></li>
-                        <li><a href="">Food Feeds</a></li>
+                        <li><a href="">Menu</a></li>
+                        <li><a href="">Feeds</a></li>
                         <li><a href="">Start Campaign</a></li>
                         <li><a href="{{pathFor 'recipehome'}}">Suggest Recipe</a></li>
                         {{#if currentUser}}
-                        <li><a id="logout">Logout</a></li>
+                        <li><a id="logout"><i class="fa fa-sign-out"></i></a></li>
                         {{else}}
                         {{/if}}
 
@@ -29,7 +29,7 @@
             <div id="sidebar-wrapper">
                 <div class="row">
                     <h6 style="margin-bottom:10px; color:#fff; margin-top:10px;margin-left: 79px;">YogiJudy</h6>
-                    <img src="http://lorempixel.com/180/180/people/9/" alt="..." class="img-circle" style="margin-bottom:20px; margin-top: 20pxpx;margin-left: 43px;">
+                    <img src="http://lorempixel.com/180/180/people/9/" alt="..." class="img-thumbnail img-circle" style="margin-bottom:20px; margin-top:20px; margin-left: 43px; border-radius:100px; ">
                     <div class="row text-center">
                         <p class="loggedinAs"> {{loggedinAs}}</p>
                     </div>
@@ -78,8 +78,8 @@
 
     <div class="container-fluid">
 
-        <!-- <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a> -->
-
+<!--         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+ -->
 
         {{> yield}}
     </div>

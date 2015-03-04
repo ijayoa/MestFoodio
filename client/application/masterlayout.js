@@ -22,8 +22,8 @@ Template.masterlayout.helpers({
    return user.emails[0].address;
  }
 });
-//     // $("#menu-toggle").click(function(e) {
-//     //     e.preventDefault();
-//     //     $("#wrapper").toggleClass("toggled");
-//     // });
-//     
+    // $("#menu-toggle").click(function(e) {
+    //     e.preventDefault();
+    //     $("#wrapper").toggleClass("toggled");
+    // });
+     

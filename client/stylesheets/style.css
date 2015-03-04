@@ -6,9 +6,18 @@
 	background-color: #CFD8DC;
 }
 .padtile{
-	background-color: #F57C00
+	background-color: #F57C00;
 
 }
+/*
+.navbar-default{
+	background-color: #34495e;
+	color:red;
+}*/
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #9E9E9E;
+    margin: 1em 0; padding: 0; }
+
 .loggedinAs{
 	color: #FFE0B2;
 
@@ -70,6 +79,7 @@ ul, ol {margin: 0;}
 body{
 
 	font-family: 'Open Sans', sans-serif;
+	background-color: #F5F5F5;
 }
 .dropdown-menu {
 
