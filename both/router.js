@@ -58,3 +58,16 @@ AccountsTemplates.configureRoute('signIn', {
     layoutTemplate: 'indexlayout',
     redirect: '/user-homepage',
 });
+
+Router.route('/recipes/:_id/details', function () {     
+  this.render('recipeDetails');               
+}, {
+  name: 'recipeDetails',
+
+  data: function(){
+    var _id = this.params._id
+    return {  
+     recipe: Recipes.findOne(_id)
+   }
+ }                      
+});

@@ -1,0 +1,39 @@
+<template name="recipehome">
+<div class="row">
+	<div class="col-md-10">
+	<h5 class="">Your Recipes</h5>
+	</div>
+	<div class="col-md-2 pull-right">
+    <a class="btn btn-warning padtile" href="{{pathFor 'newrecipe'}}"> <i class="fa  fa-plus-circle" style="padding-right:3px;"></i>Add Recipe</a>
+      
+    </div>
+</div>
+
+<hr>
+  <div class="row">
+    
+
+  </div>
+  {{#each recipes}}
+
+	<div class="col-xs-6 col-md-5 tile padtile ">
+            
+            <div class="panel status panel-danger">
+                <div class="panel-heading">
+                  <img src="img/egu.jpg"  style=""  class="img-responsive">
+
+                </div>
+                <div class="panel-body text-center">                        
+                    <a href="pathFor 'recipeinfo'}}"><strong>{{title}}</strong></a>
+                </div>
+            </div>
+
+        </div> 
+	{{else}}
+
+	<p>You have not added any recipes yet.</p>
+	{{/each}}
+
+
+	
+</template>
