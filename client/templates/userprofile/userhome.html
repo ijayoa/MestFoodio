@@ -1,67 +1,34 @@
 <template name="userhome">
-
-
-
-     <div class="row col-md-offset-2"> 
-    <div class="row ">
-        <div class="col-xs-6 col-md-5 ">
-            
-            <div class="panel status panel-danger">
-                <div class="panel-heading">
-                  <img src="img/menu.png" width="180px" style="margin-left:54px;" height="180px" class="img-responsive">
-
+    {{#each menus}}
+    <p>{{days}}</p>
+    <div class="row">
+        <!-- Card Projects -->
+        <div class="col-md-9 col-md-offset-2">
+            <div class="card">
+                <div class="card-image">
+                <div class="col-sm-6">
+                    <img class="img-responsive imagesize" src="http://www.ventures-africa.com/wp-content/uploads/2015/02/Poundo-Egusi-2.jpg">
+                    
                 </div>
-                <div class="panel-body text-center">                        
-                    <strong>View MestFood Menu</strong>
+                <div class="col-sm-6">
+                    <img class="img-responsive imagesize" src="http://www.cometonigeria.com/wp-content/uploads/2011/05/jollof-Nigerian-ways.jpg" >
+                   
                 </div>
-            </div>
-
-        </div>          
-        <div class="col-xs-6 col-md-5">
-          
-            <div class="panel status panel-warning">
-                <div class="panel-heading">
-                  <img src="img/fn.png" width="230px" style="margin-left:54px;" height="230px" class="img-responsive">
-
                 </div>
-                <div class="panel-body text-center">                        
-                  <strong>MestFoodio Feeds</strong>
+                
+                <div class="card-content">
+                    <span>{{lunch1}}.</span>
+                    <span class="pull-right">{{lunch2}}.</span>
+                </div>
+                
+                <div class="card-action">
+                    <a href="#"><span><i class="fa fa-thumbs-up">Like</i></span></a>
+                    <a href="#"><span><i class="fa fa-comments">Comment</i></span></a>
                 </div>
             </div>
-
         </div>
-       
-        	
-        </div>
-        <hr>
- <div class="row">
-        <div class="col-xs-6 col-md-5">
-           
-            <div class="panel status panel-success">
-                <div class="panel-heading text-center">
-                	<img src="img/camp.png" width="200px" style="margin-left:54px;" height="200px" class="img-responsive">
-                  
-                </div>
-                <div class="panel-body text-center">                        
-                    <strong>Start Food Campaign</strong>
-                </div>
-            </div>
-
-         
-        </div>
-        <div class="col-xs-6 col-md-5">
-          
-            <div class="panel status panel-info">
-                <div class="panel-heading">
-                    <img src="img/RECIPE.png" width="180px" style="margin-left:54px;" height="180px" class="img-responsive">
-                </div>
-                <div class="panel-body text-center">                        
-                     <a href="{{pathFor 'recipehome'}}"> <strong>Suggest Food Recipe</strong></a>
-                </div>
-            </div>
-
-         
-        </div>
-    </div>
-</div> 
+    </div>x
+    {{/each}}
+    <!-- </div> -->
+    <!-- </div> -->
 </template>
