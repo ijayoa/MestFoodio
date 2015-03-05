@@ -1,0 +1,60 @@
+<template name="usershome">
+    {{#each menus}}
+    <h5>{{days}}</h5>
+    <div class="row">
+
+        <div class="col-md-9 col-md-offset-2">
+            <div class="card">
+                <div class="card-image">
+                <div class="col-sm-6">
+                    <img class="img-responsive imagesize" src="http://www.ventures-africa.com/wp-content/uploads/2015/02/Poundo-Egusi-2.jpg">
+                    
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive imagesize" src="http://www.cometonigeria.com/wp-content/uploads/2011/05/jollof-Nigerian-ways.jpg" >
+                   
+                </div>
+                </div>
+                
+                <div class="card-content">
+                    <span>{{lunch1}}.</span>
+                    <span class="pull-right">{{lunch2}}.</span>
+                </div>
+                
+                <div class="card-action">
+                    <a href="#"><span><i class="fa fa-thumbs-up">Like</i></span></a>
+                    <a href="{{pathFor 'menuDetail'}}"><span><i class="fa fa-comments">Comment.</i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="row">
+
+        <div class="col-md-9 col-md-offset-2">
+            <div class="card">
+                <div class="card-image">
+                <div class="col-sm-6">
+                    <img class="img-responsive imagesize" src="http://www.ventures-africa.com/wp-content/uploads/2015/02/Poundo-Egusi-2.jpg">
+                    
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive imagesize" src="http://www.cometonigeria.com/wp-content/uploads/2011/05/jollof-Nigerian-ways.jpg" >
+                   
+                </div>
+                </div>
+                
+                <div class="card-content">
+                    <span>{{dinner1}}.</span>
+                    <span class="pull-right">{{dinner2}}.</span>
+                </div>
+                
+                <div class="card-action">
+                    <a href="#"><span><i class="fa fa-thumbs-up">Like</i></span></a>
+                    <a href="{{pathFor 'menuDetail'}}"><span><i class="fa fa-comments">Comment.</i></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+ 
+</template>

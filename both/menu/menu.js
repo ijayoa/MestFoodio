@@ -34,7 +34,7 @@ Menus.attachSchema(new SimpleSchema({
 	},
 	desert:{
 		type: String,
-		label: "DESSERT",
+		label: "DESERT",
 		max: 100,
 		optional:true
 	}, 

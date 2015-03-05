@@ -79,20 +79,29 @@ Router.route('/recipes/:_id/details', function () {
  }                      
 });
 
-
-// Router.route('/menus', function(){
-//   this.render('menus');
+// Router.route('/comments', function(){
+//   this.render('comments');
 // },{
-//   name: 'menus',
-//   data: function(){
-//     return{
-//       menus: Menus.find().fetch()
-//     }
-//   }
+//   name: 'comments'
 // })
 
-Router.route('/menus/newmenu', function(){
+Router.route('/newmenu', function(){
   this.render('newmenu')
 },{
   name: 'newmenu'
 })
+
+
+Router.route('/menu/:_id/details', function () {     
+ this.render('menuDetail');               
+}, {
+ name: 'menuDetail',
+
+ data: function(){
+   var _id = this.params._id
+   return {  
+    menu: Menus.findOne(_id),
+    comments:Comments.find({menuId:_id}).fetch()
+  }
+}                      
+});

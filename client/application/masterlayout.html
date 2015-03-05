@@ -7,10 +7,8 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
-                        <li><a href="">Menu</a></li>
                         <li><a href="">Feeds</a></li>
-                        <li><a href="">Start Campaign</a></li>
-                        <li><a href="{{pathFor 'recipehome'}}">Suggest Recipe</a></li>
+                        <li><a href="{{pathFor 'recipehome'}}">Recipes</a></li>
                         {{#if currentUser}}
                         <li><a id="logout"><i class="fa fa-sign-out"></i></a></li>
                         {{else}}
@@ -21,15 +19,16 @@
             </div>
         </nav>
     </div> 
+    {{#if currentUser}}
     <div class="row mainnav" style="width: 100%;">
         <div id="wrapper" >
-
+        {{#if profile}}
             {{#with profile}}
 
             <div id="sidebar-wrapper">
                 <div class="row">
-                    <h6 style="margin-bottom:10px; color:#fff; margin-top:10px;margin-left: 79px;">YogiJudy</h6>
-                    <img src="http://lorempixel.com/180/180/people/9/" alt="..." class="img-thumbnail img-circle" style="margin-bottom:20px; margin-top:20px; margin-left: 43px; border-radius:100px; ">
+                    <h6 style="margin-bottom:10px; text-align:center; display:block; color:#fff; margin-top:10px;">{{username}}</h6>
+                    <img src="http://www.alex-designs.com/pin/food_face.jpg " width="150px" height="100px" alt="..." class="img-thumbnail img-circle" style="align:center; display:block; margin-left:21%; margin-top:20px; border-radius:120px; ">
                     <div class="row text-center">
                         <p class="loggedinAs"> {{loggedinAs}}</p>
                     </div>
@@ -74,18 +73,27 @@
    </div>
 </div>
 {{/with}}
+
+{{else}}
+<div class="alert alert-danger" role="alert">Oh snap! You have to set up your <a href="{{pathFor 'setupprofile'}}">profile</a></div>
+
+{{/if}}
 <div id="page-content-wrapper">
 
-    <div class="container-fluid">
+   <div class="container-fluid">
 
 <!--         <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
- -->
+-->
 
-        {{> yield}}
-    </div>
+       {{> yield}}
+   </div>
 </div>
 
 </div>
 </div>
+{{else}}
+
+<div class="alert alert-danger" style="margin-top:100px;" role="alert">Oh snap! You have to <a href="{{pathFor 'signin'}}">Login</a> to view this page</div>
+{{/if}}
 
 </template>

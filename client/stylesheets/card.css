@@ -83,13 +83,18 @@ height:300px;
 .card .card-action {
   border-top: 1px solid rgba(160, 160, 160, 0.2);
   padding: 16px;
-  padding-left: 71%;
+
+  padding-left: 76%;
+font-size: 14px;
+}
+.umail{
+  font-size: 14px;
 }
 .card .card-action a {
   color: #34495e;
   margin-right: 16px;
-  transition: color 0.3s ease
-;  /*text-transform: uppercase;*/
+  transition: color 0.3s ease;
+
 }
 .card .card-action a:hover {
   color: #ffd8a6;
