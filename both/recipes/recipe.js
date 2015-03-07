@@ -15,6 +15,16 @@ Recipes.attachSchema(new SimpleSchema({
             rows: 10
         }
     },
+    recipepicture: {
+      type: String,
+      autoform: {
+        afFieldInput: {
+          type: 'fileUpload',
+          collection: 'Images'
+        }
+      },
+      label: 'Choose Profile Image'
+    },
     link: {
         type: String,
         label: "Add External Links:",

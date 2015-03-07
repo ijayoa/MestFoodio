@@ -11,7 +11,9 @@
 		<div class="col-sm-8  col-md-offset-2 tile padtile textalign">
 		<div class="row ">
 		 <div class="col-sm-6 col-sm-offset-3 well">
-		 	<img src="img/egu.jpg"  style=""  class=" img-responsive">
+		 {{#with FS.GetFile 'images' recipepicture}}
+		 	<img src="{{url}}"  style=""  class=" img-responsive">
+		 {{/with}}
 		 </div>
 			
 		</div>

@@ -20,7 +20,9 @@
             
             <div class="panel status panel-danger">
                 <div class="panel-heading">
-                  <img src="img/egu.jpg"  style=""  class="img-responsive">
+                {{#with FS.GetFile 'images' recipepicture}}
+                  <img src="{{url}}"  style=""  class="img-responsive">
+                {{/with}}
 
                 </div>
                 <div class="panel-body text-center">                        

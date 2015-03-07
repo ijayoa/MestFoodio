@@ -23,6 +23,16 @@ Menus.attachSchema(new SimpleSchema({
             rows: 3
         }
 	},
+	picturelunch1: {
+		type: String,
+		autoform: {
+			afFieldInput: {
+				type: 'fileUpload',
+				collection: 'Images'
+			}
+		},
+		label: 'Choose Picture for Lunch Option 1'
+	},
 	lunch2:{
 		type: String,
 		label: "Lunch Option 2",
@@ -31,6 +41,16 @@ Menus.attachSchema(new SimpleSchema({
             rows: 3
         },
        optional: true
+	},
+	picturelunch2: {
+		type: String,
+		autoform: {
+			afFieldInput: {
+				type: 'fileUpload',
+				collection: 'Images'
+			}
+		},
+		label: 'Choose Picture for Lunch Option 2'
 	},
 	desert:{
 		type: String,
@@ -47,6 +67,16 @@ Menus.attachSchema(new SimpleSchema({
             rows: 3
         }
 	},
+	picturedinner1: {
+		type: String,
+		autoform: {
+			afFieldInput: {
+				type: 'fileUpload',
+				collection: 'Images'
+			}
+		},
+		label: 'Choose Picture for Dinner Option 1'
+	},
 	dinner2:{
 		type: String,
 		label: "Dinner Option 2",
@@ -55,6 +85,16 @@ Menus.attachSchema(new SimpleSchema({
             rows: 3
         },
         optional: true
+	},
+	picturedinner2: {
+		type: String,
+		autoform: {
+			afFieldInput: {
+				type: 'fileUpload',
+				collection: 'Images'
+			}
+		},
+		label: 'Choose Picture for Dinner Option 1'
 	}
 	
 }))

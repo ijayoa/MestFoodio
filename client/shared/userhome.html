@@ -7,12 +7,14 @@
             <div class="card">
                 <div class="card-image">
                 <div class="col-sm-6">
-                    <img class="img-responsive imagesize" src="http://www.ventures-africa.com/wp-content/uploads/2015/02/Poundo-Egusi-2.jpg">
-                    
+                {{#with FS.GetFile 'images' picturelunch1}}
+                    <img class="img-responsive imagesize" src="{{url}}">
+                {{/with}}   
                 </div>
                 <div class="col-sm-6">
-                    <img class="img-responsive imagesize" src="http://www.cometonigeria.com/wp-content/uploads/2011/05/jollof-Nigerian-ways.jpg" >
-                   
+                {{#with FS.GetFile 'images' picturelunch2}}
+                    <img class="img-responsive imagesize" src="{{url}}" >
+                {{/with}}
                 </div>
                 </div>
                 
@@ -34,12 +36,15 @@
             <div class="card">
                 <div class="card-image">
                 <div class="col-sm-6">
-                    <img class="img-responsive imagesize " src="http://www.ventures-africa.com/wp-content/uploads/2015/02/Poundo-Egusi-2.jpg">
+                {{#with FS.GetFile 'images' picturedinner1}}
+                    <img class="img-responsive imagesize " src="{{url}}">
+                {{/with}}
                     
                 </div>
                 <div class="col-sm-6">
-                    <img class="img-responsive imagesize" src="http://www.cometonigeria.com/wp-content/uploads/2011/05/jollof-Nigerian-ways.jpg" height="234px">
-                   
+                {{#with FS.GetFile 'images' picturedinner2}}
+                    <img class="img-responsive imagesize" src="{{url}}" height="234px">
+                {{/with}}
                 </div>
                 </div>
                 

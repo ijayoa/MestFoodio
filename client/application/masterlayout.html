@@ -28,7 +28,9 @@
             <div id="sidebar-wrapper">
                 <div class="row">
                     <h6 style="margin-bottom:10px; text-align:center; display:block; color:#fff; margin-top:10px;">{{username}}</h6>
-                    <img src="http://www.alex-designs.com/pin/food_face.jpg " width="150px" height="100px" alt="..." class="img-thumbnail img-circle" style="align:center; display:block; margin-left:21%; margin-top:20px; border-radius:120px; ">
+                    {{#with FS.GetFile 'images' picture}}
+                    <img src="{{url}}" width="150px" height="100px" alt="..." class="img-thumbnail img-circle" style="align:center; display:block; margin-left:21%; margin-top:20px; border-radius:120px; ">
+                    {{/with}}
                     <div class="row text-center">
                         <p class="loggedinAs"> {{loggedinAs}}</p>
                     </div>

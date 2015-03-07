@@ -6,6 +6,16 @@ Profiles.attachSchema(new SimpleSchema({
         label: "Foodio Name:",
         max: 200
     },
+    picture: {
+        type: String,
+        autoform: {
+            afFieldInput: {
+                type: 'fileUpload',
+                collection: 'Images'
+            }
+        },
+        label: 'Choose Picture'
+    },
     allergies: {
         type: String,
         label: "Your Allergies:",

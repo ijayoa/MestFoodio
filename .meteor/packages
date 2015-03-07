@@ -20,4 +20,5 @@ raix:handlebar-helpers
 cfs:standard-packages
 yogiben:autoform-file
 useraccounts:bootstrap
-cfs:gridfs
+cfs:gridfs@=0.0.27
+cfs:ui
