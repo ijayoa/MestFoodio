@@ -9,6 +9,9 @@
 	background-color: #F57C00;
 
 }
+.spancolor{
+	color: #F57C00;
+}
 /*
 .navbar-default{
 	background-color: #34495e;
@@ -17,7 +20,10 @@
 hr { display: block; height: 1px;
     border: 0; border-top: 1px solid #9E9E9E;
     margin: 1em 0; padding: 0; }
-
+.sidehr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #9E9E9E;
+    margin: 0em 0; padding: 0; 
+background-color: #F57C00;}
 .loggedinAs{
 	color: #FFE0B2;
 

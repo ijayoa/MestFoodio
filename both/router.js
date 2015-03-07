@@ -14,9 +14,9 @@ Router.route('/', function () {
 
 
 Router.route('/user-profile', function () {      
-  this.render('setupprofile');            
+  this.render('profile');            
 }, {
-  name: 'setupprofile'
+  name: 'profile'
 });
 
 
@@ -62,7 +62,7 @@ AccountsTemplates.configureRoute('signIn', {
     path: '/login',
     template: 'signIn',
     layoutTemplate: 'indexlayout',
-    redirect: '/user-homepage',
+    redirect: '/user-profile',
 });
 
 

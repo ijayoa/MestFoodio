@@ -7,7 +7,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
-                        <li><a href="">Feeds</a></li>
+                        <li><a href="{{pathFor 'userhome'}}">Feeds</a></li>
                         <li><a href="{{pathFor 'recipehome'}}">Recipes</a></li>
                         {{#if currentUser}}
                         <li><a id="logout"><i class="fa fa-sign-out"></i></a></li>
@@ -33,41 +33,40 @@
                         <p class="loggedinAs"> {{loggedinAs}}</p>
                     </div>
                 </div>
-                <div class="row" style=" background-color:#FFE0B2; margin:5px; border-radius:5px;">
-                   <div class="row " >
-                    <div class="col-sm-3">
-                       <img src="PNG/10.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
-                   </div>
-                   <div class="col-sm-9">
-                       <p>Favourite:</p>
-                       <p>{{favourite}}</p>
-                   </div>
-
+                <div class="row" style="margin:5px; background-color:#FFE0B2; border-radius:5px;">
+                   <div class="row text-center" >
+                    
+                       <img src="PNG/10.png" width="50px" height="50px" alt="" style="  margin-left:40%;display:block; border:0px;vertical-align:middle">
+                       <hr class="sidehr">
+                   
+                   <span class="spancolor">
+                       <p>Likes:{{favourite}}</p>
+                   </span>
+                   <hr class="sidehr" >
+                 
                </div>
 
-               <div class="row">
-                <div class="col-sm-3">
-                   <img src="PNG/23.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
-               </div>
-               <div class="col-sm-9">
-                   <p>Allergies:</p>
-                   {{#if $eq allergies ""}}<p>None</p>
+               <div class="row text-center">
+                
+                   <img src="PNG/23.png" width="50px" height="50px" alt="" style="  margin-left:40%; display:block; border:0px;vertical-align:middle">
+                   <hr class="sidehr">
+        
+                   {{#if $eq allergies ""}}<span class="spancolor">Allergies:None</span>
                    {{else}}
-                   <p>{{allergies}}</p>
+                   <span class="spancolor">Allergies:{{allergies}}</span>
                    {{/if}}
 
-               </div>
-               <hr class="hrline">
+               
+               <hr class="sidehr">
 
            </div>
-           <div class="row">
-            <div class="col-sm-3">
-               <img src="PNG/15.png" width="50px" height="50px" alt="" style="border:0px;vertical-align:middle">
-           </div>
-           <div class="col-sm-9">
-               <p>Dislike:</p>
-               <p>{{notfavourite}}</p>
-           </div>
+           <div class="row text-center">
+            
+               <img src="PNG/15.png" width="50px" height="50px" alt="" style=" margin-left:40%; display:block; border:0px;vertical-align:middle">
+        <hr class="sidehr">
+           <span class="spancolor">
+               <p>Dislike:{{notfavourite}}</p>
+           </span>
 
        </div>
    </div>
@@ -75,7 +74,7 @@
 {{/with}}
 
 {{else}}
-<div class="alert alert-danger" role="alert">Oh snap! You have to set up your <a href="{{pathFor 'setupprofile'}}">profile</a></div>
+<div class="alert alert-danger" style="margin-top:30px;"  role="alert">Welcome to MESTFoodio! You have to set up your <strong>profile to continue</strong></div>
 
 {{/if}}
 <div id="page-content-wrapper">
